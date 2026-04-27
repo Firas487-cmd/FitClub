@@ -1,0 +1,89 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+table{
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+}
+input, label{
+    display: block;
+    margin: 15px;
+}
+label{
+    padding: 10px 20px;
+    color: orange;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+input{
+    border: none;
+    outline: none;
+    background-color: rgb(128, 123, 123);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.5s ease;
+    font-weight: bold;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 1.4rem;
+    color: #fff;
+}
+input::placeholder{ color: #ddd; }
+input:hover{
+    border-bottom: 2px solid orange;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 18px orange;
+}
+input:focus{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid orange;
+}
+.env{
+    background-color: orange;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 12px;
+}
+.env:hover{
+    background-color: transparent;
+    border: 2px solid orange;
+    color: #fff;
+    box-shadow: 0 0 18px orange;
+}
+
+/* Responsive form */
+@media (max-width: 768px) {
+    table{ display: block; }
+    table tbody{ display: block; }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    table td{
+        width: 100%;
+        display: block;
+    }
+    input{ margin: 8px 0; }
+    label{ margin: 10px 0 4px; }
+    .env{ font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+    label{ font-size: 1.4rem; }
+    input{ font-size: 1.3rem; }
+    .env{ font-size: 1.5rem; }
+}

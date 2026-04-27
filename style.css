@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    outline: none;
+    font-family:'Poppins', sans-serif;
+}
+body{
+    background-image: url("images/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    color: #fff;
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 8% 2rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 1.5rem 9%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+nav{ margin-top: 0; }
+.logo{
+    font-size: 3.5rem;
+    color: #fff;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+.logo:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 18px orange;
+}
+span{ color: orange; }
+.navbar{
+    display: flex;
+    list-style-type: none;
+}
+.navbar a{
+    font-size: 1.6rem;
+    font-weight: 500;
+    background-color: orange;
+    border-radius: 30px;
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px 20px;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: #fff;
+    background-color: transparent;
+    transform: translateY(5px) scale(1.01);
+    border: 2px solid orange;
+    border-radius: 30px;
+    box-shadow: 0 0 18px orange;
+    text-shadow: 0 0 18px black;
+}
+.nav-btn{ display: none; }
+
+/* Hamburger */
+#menu-icon{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+    transition: 0.3s ease;
+}
+#menu-icon:hover{ color: orange; }
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.home-contenu h3{ font-size: 5rem; font-weight: 700; }
+.home-contenu span{ font-size: 4.5rem; font-weight: 550; }
+.home-contenu h1{ font-size: 5rem; font-weight: 700; line-height: 1.3; }
+.home-contenu p{ font-size: 1.6rem; margin-bottom: 2rem; margin-top: 2rem; }
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: orange;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    color: #000;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+.btn:hover{
+    color: #fff;
+    box-shadow: 0 0 1.6rem orange;
+    text-shadow: 0 0 1.6rem #fff;
+}
+.img img{ width: 45vw; max-width: 500px; }
+
+/* Services */
+.services{ background-color: #111; }
+.services-contenu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.3rem;
+    margin-top: 4.1rem;
+}
+.heading{ text-align: center; font-size: 4rem; }
+.ligne{
+    background-color: #000;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px orange;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+.ligne img{ height: auto; width: 100%; border-radius: 30px; margin-bottom: 1.4rem; }
+.ligne h4{ font-size: 2rem; font-weight: 700; margin-bottom: 10px; text-align: center; }
+.ligne:hover{
+    border: 1px solid orange;
+    transform: translateY(-10px) scale(1.02);
+    cursor: pointer;
+}
+
+/* About */
+.about{ display: flex; justify-content: center; align-items: center; gap: 3rem; }
+.about-img img{
+    width: 45vw;
+    max-width: 500px;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    transition: 0.5s ease;
+}
+.about-img img:hover{ transform: scale(1.01); border: 2px solid orange; }
+.about-contenu{ padding: 0 2rem; }
+.about-contenu .heading{ text-align: center; font-size: 3.5rem; }
+.about-contenu p{ font-size: 1.5rem; margin: 1.5rem 0; }
+
+/* Prix */
+.plan{ background-color: #000; }
+.plan-contenu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: start;
+    gap: 2.3rem;
+    margin-top: 4.2rem;
+}
+.box{
+    padding: 30px 30px 50px;
+    background-color: #000;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 5px orange;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.box h2{ font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; }
+.box h3{ font-size: 2.8rem; font-weight: 600; margin-bottom: 10px; }
+.box ul{ list-style-type: disc; padding-left: 1.5rem; }
+.box ul li{ font-size: 1.6rem; padding-bottom: 1rem; }
+.box a{
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 7px 0;
+    color: orange;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.box a:hover{
+    padding: 1rem 2.8rem;
+    background: transparent;
+    color: #fff;
+    box-shadow: 0px 0px 5px orange;
+    text-shadow: 0px 0px 5px #fff;
+    border: 2px solid orange;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+.box:hover{ border: 1px solid orange; transform: translateY(-5px) scale(1.01); }
+
+/* Contact */
+.contact{ display: flex; flex-direction: column; align-items: center; justify-content: center; }
+iframe{
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: 3rem;
+    width: 80%;
+    height: 450px;
+    transition: 0.5s ease;
+}
+iframe:hover{
+    box-shadow: 0 0 18px orange;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transform: scale(1.01);
+}
+
+/* Footer */
+footer{ position: relative; width: 100%; padding: 40px 0; background-color: #111; }
+footer .social_media{ text-align: center; padding-bottom: 20px; color: orange; }
+footer .social_media a{
+    font-size: 25px;
+    color: orange;
+    border: 2px solid orange;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+footer .social_media a:hover{
+    transform: translateY(-10px) scale(1.3);
+    background-color: orange;
+    color: #131313;
+    box-shadow: 0 0 25px orange;
+}
+footer .copyright{ margin-top: 20px; text-align: center; color: #fff; }
+
+
+/* ============================================================
+   TABLETTE  (≤ 991px)
+   ============================================================ */
+@media (max-width: 991px) {
+    header{ padding: 1.2rem 5%; }
+    .logo{ font-size: 3rem; }
+    .navbar a{ font-size: 1.4rem; padding: 8px 14px; margin-left: 8px; }
+    section{ padding: 9rem 5% 2rem; }
+    .home-contenu h1, .home-contenu h3{ font-size: 4rem; }
+    .home-contenu span{ font-size: 3.5rem; }
+    .img img{ width: 42vw; }
+    .about-img img{ width: 42vw; }
+    .services-contenu{ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .plan-contenu{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    iframe{ width: 90%; height: 380px; }
+}
+
+
+/* ============================================================
+   MOBILE  (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    #menu-icon{ display: block; }
+
+    header{ height: 70px; padding: 1rem 5%; }
+    .logo{ font-size: 2.8rem; }
+
+    nav{
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        padding: 1.5rem 0 2rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease;
+        pointer-events: none;
+    }
+    nav.open{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        pointer-events: all;
+    }
+    .navbar{ flex-direction: column; align-items: center; gap: 0.8rem; }
+    .navbar li{ width: 85%; }
+    .navbar a{ display: block; text-align: center; margin: 0; width: 100%; font-size: 1.6rem; padding: 12px 0; }
+    .nav-btn{
+        display: block;
+        width: 85%;
+        margin: 1rem auto 0;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: orange;
+        border: 2px solid orange;
+        border-radius: 1rem;
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+    .nav-btn:hover{ background-color: orange; color: #fff; box-shadow: 0 0 18px orange; }
+
+    section{ padding: 8rem 5% 3rem; min-height: auto; }
+
+    /* Accueil */
+    .home{ flex-direction: column; text-align: center; gap: 2rem; }
+    .home-contenu h1{ font-size: 3.5rem; }
+    .home-contenu h3{ font-size: 3rem; }
+    .home-contenu span{ font-size: 2.8rem; }
+    .home-contenu p{ font-size: 1.4rem; }
+    .img{ width: 100%; text-align: center; }
+    .img img{ width: 85%; max-width: 400px; }
+
+    .heading{ font-size: 3.2rem; }
+
+    /* Services */
+    .services-contenu{ grid-template-columns: 1fr; gap: 2rem; }
+    .ligne:hover{ transform: translateY(-5px) scale(1.01); }
+
+    /* À propos */
+    .about{ flex-direction: column; gap: 2rem; }
+    .about-img{ width: 100%; }
+    .about-img img{ width: 100%; max-width: 100%; }
+    .about-contenu{ padding: 0; width: 100%; }
+    .about-contenu .heading{ font-size: 3rem; text-align: center; }
+    .about-contenu p{ font-size: 1.4rem; }
+
+    /* Prix */
+    .plan-contenu{ grid-template-columns: 1fr; max-width: 450px; margin-left: auto; margin-right: auto; }
+    .box{ padding-bottom: 2.5rem; }
+    .box h2{ font-size: 3rem; }
+    .box h3{ font-size: 2.4rem; }
+    .box ul li{ font-size: 1.5rem; }
+
+    /* Contact */
+    iframe{ width: 100%; height: 300px; margin-top: 2rem; border-radius: 15px; }
+    iframe:hover{ transform: none; }
+}
+
+
+/* ============================================================
+   PETIT MOBILE  (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .logo{ font-size: 2.4rem; }
+    section{ padding: 7rem 4% 3rem; }
+    .home-contenu h1{ font-size: 2.8rem; }
+    .home-contenu h3{ font-size: 2.4rem; }
+    .home-contenu span{ font-size: 2.2rem; }
+    .home-contenu p{ font-size: 1.3rem; }
+    .btn{ font-size: 1.4rem; padding: 0.9rem 2rem; }
+    .heading{ font-size: 2.8rem; }
+    .about-contenu .heading{ font-size: 2.6rem; }
+    .box h2{ font-size: 2.5rem; }
+    .box h3{ font-size: 2rem; }
+    footer .social_media a{ width: 36px; height: 36px; line-height: 36px; font-size: 20px; margin: 0 6px; }
+    iframe{ height: 250px; }
+}
